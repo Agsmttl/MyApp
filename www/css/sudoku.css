@@ -1,0 +1,46 @@
+/* Estilo Tabla */
+*{
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    background-color:black;
+    color: whitesmoke;
+}
+h1{
+    text-align: center;
+    margin-top: 2rem;
+}
+table{
+    border-collapse: collapse;
+    width: 21rem;
+    height: 21rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+td{
+    width: 11.111111%;
+    height: 11.111111%;
+    border: .1rem solid whitesmoke;
+    text-align: center;
+    font-size: 1.3rem;
+    border-style: dotted;
+    border-width: 0.25rem;
+}
+    td:hover{
+        background-color: #202020;
+    }
+
+tr td:nth-child(3), tr td:nth-child(6){
+    border-right-color: whitesmoke;
+}
+tr:nth-child(3) td, tr:nth-child(6) td{
+    border-bottom-color: whitesmoke;
+}
+
+div table{
+    height: 7.2rem;
+}
+div table td{
+    width: 20%;
+    font-size: 2.2rem;
+}

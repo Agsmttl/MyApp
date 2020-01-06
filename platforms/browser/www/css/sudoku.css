@@ -1,0 +1,18 @@
+/* Estilo Tabla */
+td{
+    width: 2rem;
+    height: 2rem;
+    border: .1rem solid black;
+}
+
+/* Resetear estilo select */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;       /* Remove default arrow */
+    background-image: url(...);   /* Add custom arrow */
+}
+/* Hacer estilo compatible con IE 10 y 11 */
+select::-ms-expand {
+    display: none; /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
+}

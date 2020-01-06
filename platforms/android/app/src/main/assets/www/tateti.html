@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>TA-TE-TI</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="css/general.css">
+    <link href="css/tateti1.css" rel="stylesheet">
+</head>
+<body>
+
+        <audio id="firstAudio">
+            <source src="sounds/jugadoruno.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="secondAudio">
+                <source src="sounds/jugadordos.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="winAudio">
+                <source src="sounds/winner.mp3" type="audio/mpeg">
+        </audio>
+
+    <div>
+            <h1 class="glitch">Ta-te-ti</h1>
+            <p>¡El primero en alinear tres de sus fichas será el ganador!</p>
+        <div class="horiflex">
+            <p class="percenter" id="p1">Jugador Uno<br><b>0</b></p>
+            <table>
+                <tbody id="tabla">
+                    <!-- generado con js -->
+                </tbody>
+            </table>
+            <p class="percenter" id="p2">Jugador Dos<br><b>0</b></p>
+        </div>
+            <h2 id="info"></h2>
+            <button onclick="reset()" class="fondoGradiente">Reiniciar</button>
+    </div>
+    <script src="js/tateti.js"></script>
+</body>
+</html>
