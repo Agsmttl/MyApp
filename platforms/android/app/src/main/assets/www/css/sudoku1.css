@@ -4,8 +4,6 @@ table{
     height: 22rem;
     margin: 0 auto;
     margin-top: 2rem;
-    background-color: white;
-    color: black;
 }
 td{
     width: 11.111111%;
@@ -15,16 +13,18 @@ td{
     font-size: 1rem;
 }
     td:hover{
-        background-color: #FFFF05;
+        background-color: #202020;
     }
 
 tr td:nth-child(3), tr td:nth-child(6){
-    border-right-color: black;
+    border-right-color: white;
     border-right-width: .3rem;
+    color: yellowgreen;
 }
 tr:nth-child(3) td, tr:nth-child(6) td{
-    border-bottom-color: black;
+    border-bottom-color: white;
     border-bottom-width: .3rem;
+    color: tomato;
 }
 
 div table{

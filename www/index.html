@@ -34,9 +34,15 @@
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <!--<link rel="stylesheet" type="text/css" href="css/index.css">-->
         <link rel="stylesheet" media="screen" href="css/general.css">
+        <link rel="stylesheet" type="text/css" href="css/index1.css">
         <title>Hello World</title>
     </head>
     <body onload="loadPlayers()">
+        <div id="loadingTransition">
+            <div id="transitionHider"></div>
+            <!--<h1>Guem</h1>-->
+            <div id="barraConLogos"></div>
+        </div>
         <div class="app">
             <h1>Apache Cordova</h1>
             <div id="deviceready" class="blink">
@@ -55,7 +61,8 @@
                 <button id="photo" onclick="takePicture('myImage2')"> Take a photo</button>
                 <img id="myImage2" alt="picture" src="img/no-user.jpeg">             
                 <p id="printPlayer2">none</p>
-                <input maxlength="8" type="text" name="name2" id="nombre2">
+                <input maxlength="8"
+                       type="text" name="name2" id="nombre2">
                 <input maxlength="8" type="text" name="nickName2" id="apodo2" onchange="saveNewPlayer(document.getElementById('nombre2').value, this.value, 2);loadPlayers()">
             </div>
             <div id="menuJuegos">

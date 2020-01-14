@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" media="screen" href="css/memotest.css">-->
+    <link rel="stylesheet" media="screen" href="css/memotest.css">
     <link rel="stylesheet" media="screen" href="css/general.css">
     <title>Memotest</title>
 </head>
 <body onload="loadData()">
-    <header>
+    <!--<header>
         <h1>Memotest</h1>
-    </header>
+    </header>-->
     <main>
-        <select id='rowsAndCols' onchange='selectTable()'>
-            <option value="none" selected disabled hidden>Seleccionar</option>
-            <option value="4">4x4</option>
-            <option value="5">5x5</option>
-            <option value="6">6x6</option>
-        </select>
-        <div id="turnos"></div>
-        <p id="point1"></p>
-        <p id="point2"></p>
-        <table>
+        <div class="superior">
+            <select id='rowsAndCols' onchange='selectTable()'>
+                <option value="none" selected disabled hidden>Seleccionar</option>
+                <option value="4">4x4</option>
+                <option value="5">5x5</option>
+                <option value="6">6x6</option>
+            </select>
+            <div id="turnos"></div>
+            <p id="point1"></p>
+        </div>
+
+        <table class="juego">
             <tbody id='memo'></tbody>
             <!--JS-->
         </table>
 
+        <div class="inferior">
+            <p id="point2"></p>
+        </div>
+
     </main>
     <footer>
-        Grupo: Micaela Bel&eacute;n Fern&aacute;ndez, Axel Julian Dumas Cutuli, Mar&iacute;a Agustina Mattioli Pacheco
-        <br>
-        <div>Icons made by <a href="https://www.flaticon.es/autores/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.es/"     title="Flaticon">www.flaticon.com</a></div>
-        
     </footer>
     <script src="js/memotest.js"></script>
 </body>

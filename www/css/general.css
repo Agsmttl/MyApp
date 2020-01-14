@@ -21,8 +21,34 @@
         color: #F205B3;
 	}
 }
+@keyframes background-blink {
+    0% {
+        background-position: bottom;
+	}
+	50% {
+		background-position: center;
+	}
+	100% {
+		background-position: top;
+	}
+}
+@keyframes hide-transition {
+    0% {
+        height: 0;
+	}
+	50% {
+        height: 100vh;
+	}
+	100% {
+        top: 100vh;
+        height: 0;
+	}
+}
+@keyframes remove-loading-transition{
+}
+@keyframes play-loading-transition{
 
-
+}
 
 
 /*---   GENERAL STYLES   ---*/
@@ -42,13 +68,115 @@ body
     color: white;
     padding: 0.8rem;
     font-size: 100%;
+    overflow: hidden;
+}
+main{
+    height: calc(100vh - 1.6rem);
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 h1{
     font-size: 2rem;
     width: 100%;
     text-align: center;
     color: #FFFF05;
-    animation: blink 3s ease infinite;
+    animation: blink 3s infinite;
     animation-direction: alternate;
     padding: 1rem 0rem;
+}
+*{
+    -ms-interpolation-mode: nearest-neighbor; /*IE 7+ (non-standard property)*/
+    image-rendering: -webkit-optimize-contrast; /*Safari 6, UC Browser 9.9*/
+    image-rendering: -webkit-crisp-edges; /*Safari 7+*/
+    image-rendering: -moz-crisp-edges; /*Firefox 3.6+*/
+    image-rendering: -o-crisp-edges; /*Opera 12*/
+    image-rendering: pixelated; /*Chrome 41+ and Opera 26+*/
+  }
+
+
+/*---   PANTALLAS DE CARGA   ---*/
+
+/*#loadingTransition{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #F205B3, #27DEF2, #FFFF05);
+    background-repeat: no-repeat;
+    background-size: 200vh 200vh;
+    animation: removeLoadingTransition 3s infinite alternate ease-out;
+    animation: background-blink 2s infinite alternate ease-out;
+}
+#barraConLogos{
+    height: 75vh;
+    background-image: url("../img/animations/loguito.gif");
+    background-position: center;
+    background-size: 15vh;
+    width: 45vh;
+    margin: 12.5vh calc(50% - 22.5vh);
+    background-color: black;
+}
+#transitionHider{
+    animation: hideTransition 3s infinite alternate ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F205B3;
+}*/
+
+#loadingTransition{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, #F205B3, #27DEF2, #FFFF05);
+    background-repeat: no-repeat;
+    display: none;
+}
+#barraConLogos{
+    height: 75vh;
+    background-image: url("../img/animations/loguito.gif");
+    background-position: center;
+    background-size: 15vh;
+    width: 45vh;
+    margin: 12.5vh calc(50% - 22.5vh);
+    background-color: black;
+}
+
+/*---   CAJAS ORGANIZADORAS   ---*/
+div, table, tbody, tr, td, main{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+tbody{
+    height: 100%;
+}
+.superior{
+    align-self: flex-start;
+    width: 100%;
+    height: 20vh;
+}
+.inferior{
+    align-self: flex-start;
+    width: 100%;
+    height: 20vh;
+}
+.juego{
+    width: 100%;
+    height: 60vh;
+}
+
+/*---   DECORACIONES   ---*/
+.decorTopBar{
+
+}
+.decorBottomBar{
+    
 }

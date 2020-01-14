@@ -1,96 +1,96 @@
 var listObjs=
 [{
-    alt: "apple",
+    alt: "aku",
     id: 00,
     found: 0
 },
 {
-    alt:"aubergine",
+    alt:"bertha",
     id: 01,
     found: 0
 },
 {
-    alt:"banana",
+    alt:"corpio",
     id: 02,
     found: 0
 },
 {
-    alt:"avocado",
+    alt:"crabo",
     id: 03,
     found: 0
 },
 {
-    alt:"grapes",
+    alt:"cuarteto",
     id: 04,
     found: 0
 },
 {
-    alt:"carrot",
+    alt:"diablo",
     id: 05,
     found: 0
 },
 {
-    alt:"cherries",
+    alt:"fish",
     id: 06,
     found: 0
 },
 {
-    alt:"lemon",
+    alt:"gemin",
     id: 07,
     found: 0
 },
 {
-    alt:"lime",
+    alt:"izma",
     id: 08,
     found: 0
 },
 {
-    alt:"peach",
+    alt:"kristi",
     id: 09,
     found: 0
 },
 {
-    alt:"pear",
+    alt:"luces",
     id: 10,
     found: 0
 },
 {
-    alt:"pepper",
+    alt:"marvin",
     id: 11,
     found: 0
 },
 {
-    alt:"pineapple",
+    alt:"nefer",
     id: 12,
     found: 0
 },
 {
-    alt:"pumpkin",
+    alt:"nejo",
     id: 13,
     found: 0
 },
 {
-    alt:"raspberry",
+    alt:"pacman",
     id: 14,
     found: 0
 },
 {
-    alt:"strawberry",
+    alt:"palad",
     id: 15,
     found: 0
 },
 {
-    alt:"tomato",
+    alt:"patricia",
     id: 16,
     found: 0
 },
 {
-    alt:"watermelon",
+    alt:"ursula",
     id: 17,
     found: 0
 },
 {
-    alt:"onion",
+    alt:"ais",
     id: 18,
     found: 0
 }];
@@ -120,6 +120,20 @@ var fruit0 = null;
 var card0 = null;
 var fruit1 = null;
 var card1 = null;
+
+function setCardSize(){
+    var tds = document.getElementsByTagName("td");
+    for (let i = 0; i < tds.length; i++) {
+        if (select.value == 4) {
+            tds.setAttribute("style", "width:22%;")
+        }if (select.value == 5) {
+            tds.setAttribute("style", "width:19%;")
+        }if (select.value == 6) {
+            tds.setAttribute("style", "width:15%;")
+        }
+    }
+    
+}
 
 function loadData()
 {
@@ -251,11 +265,11 @@ function createCards(a,b,objectArray) {
     //set image
     var img = document.createElement("img");
 
-    img.setAttribute("src","img/memotest/"+objectArray.alt+".svg");
+    img.setAttribute("src","img/memotest/"+objectArray.alt+".gif");
     img.setAttribute("id", ""+objectArray.id);
-    img.setAttribute("alt", "reverse");
+    img.setAttribute("alt", ""+objectArray.alt);
 
-    //for the onion card:
+    //for the ais card:
     if (img.id == "18") back.setAttribute("style", "background-color:black")
 
     card.setAttribute("onclick", "swapIt("+a+","+b+",this)");
@@ -338,9 +352,9 @@ function swapIt(pos1,pos2,card) {
                         turnCard(card, true);
                         turnCard(cardAux, true);
                         //console.log(rotated);
-                        //Onion?
+                        //ais?
                         if (fruitAux.id == 18 || fruit.id == 18){
-                            console.log("onion spoted! -750 points to current player")
+                            console.log("ais spoted! -750 points to current player")
                             if (turn == 1) {
                                 player1.points -= 750;
                             }else{
@@ -435,8 +449,8 @@ function fillArrayTwice(cant, list){
     
     if(cant == 25)
     {
-        var onion = listFruits[listFruits.length-1];
-        myNewArray.push(onion);
+        var ais = listFruits[listFruits.length-1];
+        myNewArray.push(ais);
     }
     return myNewArray;
 }
