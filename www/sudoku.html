@@ -11,36 +11,35 @@
     <title>Sudoku</title>
 </head>
 <body>
-    <header>
-        <h1>Sudoku</h1>
-    </header>
     <main>
-        <table>
+        <div class="superior">
+            <h1>Sudoku</h1>
+        </div>
+        <table class="juego genericBox">
             <tbody id="sudokuBoard">
                 <!-- Armado por JavaScript -->
             </tbody>
         </table>
-        <div>
-            <table>
-                <tbody id="teclado">
+        <div class="inferior genericBox">
+            <table id="teclado">
+                <tbody id="tecladoJS" class="disabledBox">
                     <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
+                        <td onclick="selectNumber(1);">1</td>
+                        <td onclick="selectNumber(2);">2</td>
+                        <td onclick="selectNumber(3);">3</td>
+                        <td onclick="selectNumber(4);">4</td>
+                        <td onclick="selectNumber(5);">5</td>
                     </tr>
                     <tr>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>X</td>
+                        <td onclick="selectNumber(6);">6</td>
+                        <td onclick="selectNumber(7);">7</td>
+                        <td onclick="selectNumber(8);">8</td>
+                        <td onclick="selectNumber(9);">9</td>
+                        <td onclick="selectNumber(0);">X</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </main>
     <footer>
         <script src="js/sudoku.js"></script>
     </footer>

@@ -40,7 +40,7 @@ tr{
     height: 30%;
 }
 td{
-    /*border-style: dotted;*/
+    border-style: solid;
     border-width: 0.25rem;
     text-align: center;
     border-color: rgb(255, 255, 255);
@@ -135,7 +135,7 @@ p{
 button{
     width: 30%; /* puede ir al lado del cuadro*/
    /* margin: 2rem calc(35% - 6px); */
-    border-style: dotted;
+    border-style: solid;
     border-width: 0.25rem;
     font-family: 'Press Start 2P', cursive;
     background-color: black;

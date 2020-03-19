@@ -13,13 +13,6 @@
     </header>-->
     <main>
         <div class="superior">
-            <select id='rowsAndCols' onchange='selectTable()'>
-                <option value="none" selected disabled hidden>Seleccionar</option>
-                <option value="4">4x4</option>
-                <option value="5">5x5</option>
-                <option value="6">6x6</option>
-            </select>
-            <div id="turnos"></div>
             <p id="point1"></p>
         </div>
 
@@ -30,6 +23,16 @@
 
         <div class="inferior">
             <p id="point2"></p>
+        </div>
+
+        <div class="mensajes">
+            <select id='rowsAndCols' onchange='selectTable()'>
+                <option value="none" selected disabled hidden>Seleccionar</option>
+                <option value="4">4x4</option>
+                <option value="5">5x5</option>
+                <option value="6">6x6</option>
+            </select>
+            <div id="turnos"></div>
         </div>
 
     </main>

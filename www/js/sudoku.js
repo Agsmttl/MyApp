@@ -1,22 +1,15 @@
 
 //Hacer Tablero
 var HTMLboard = document.getElementById("sudokuBoard");
+var selectedTile;
+var currentRow;
+var currentCol;
+var teclado = document.getElementById("tecladoJS");
 
 for(i=0; i<9; i++){
     let row = document.createElement("tr");
     for(j=0; j<9; j++){
         let col = document.createElement("td");
-        //var select = document.createElement('<select name="socket" id="'+i+''+j+'">');
-        /*var select = document.createElement("select");
-        select.setAttribute("name", "");
-        select.setAttribute("id", i+""+j);
-        for(k=0; k<=9; k++){
-            //var option = document.createElement('<option value="'+i+'">1</option>');
-            var option = document.createElement("option");
-            option.setAttribute("value", k);
-            option.innerText = k;
-            select.insertAdjacentElement("beforeend", option)
-        }*/
         col.setAttribute("id",i+""+j);
         //col.appendChild(select);
         row.insertAdjacentElement("beforeend",col);
@@ -46,12 +39,46 @@ var matrixBoard =
 
 
 function printWholeBoard(){
-    for(i=0; 1<9; i++){
+    for(i=0; i<9; i++){
         for(j=0; j<9; j++){
-            var square = document.getElementById(i+""+j);
+            let square = document.getElementById(i+""+j);
             if (matrixBoard[i][j] !== 0) {
-                square.innerHTML= matrixBoard[i][j];
+                square.innerHTML = matrixBoard[i][j];
+                square.value = matrixBoard[i][j];
+                square.setAttribute("class","numFijo");
             }
+            else{
+                square.setAttribute("onclick","selectTile("+i+","+j+")");
+            }
+        }
+    }
+}
+
+function selectTile(row,col){
+    selectedTile = document.getElementById(row+""+col);
+    //selectedTile.classList.add("activeBox");
+
+    currentRow = row;
+    currentCol = col;
+};
+
+function selectNumber(num){
+    selectedTile.value = num;
+
+    if (selectedTile.value !== 0) {
+        selectedTile.innerHTML = num;
+    }else{
+        selectedTile.innerHTML = "";
+    }
+
+    matrixBoard[currentRow][currentCol] = num;
+
+}
+
+function findMatches(arrayPosition){
+    if (currentrow) {
+        for(let i=0; 1<9; i++){
+            
         }
     }
 }

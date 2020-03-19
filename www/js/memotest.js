@@ -143,7 +143,9 @@ function loadData()
         if (finishingPair < size*size-1)
         {
             buildTable();   
-            document.getElementById('rowsAndCols').disabled = true;
+            var select = document.getElementById('rowsAndCols');
+            select.disabled = true;
+            select.style = "display:none;"
         }
     }
 }
@@ -186,6 +188,12 @@ function showPoints(){
     document.getElementById("turnos").innerHTML = "Es el turno del jugador " + turn;
     document.getElementById("point1").innerHTML = "Jugador 1: " + player1.points;
     document.getElementById("point2").innerHTML = "Jugador 2: " + player2.points;
+
+    if (turn == 1){
+        document.getElementById("turnos").style = "background-color: #27DEF2;"
+    }else{
+        document.getElementById("turnos").style = "background-color: #F205B3;"
+    }
 }
 
 function selectTable()
@@ -197,6 +205,7 @@ function selectTable()
     var select = document.getElementById('rowsAndCols');
     size = select.value;
     select.disabled = true;
+    select.style = "display: none;";
     select.value = "Seleccionar";
     size = parseInt(size);
     var arrayTwice = fillArrayTwice((size*size), listObjs);
@@ -270,7 +279,7 @@ function createCards(a,b,objectArray) {
     img.setAttribute("alt", ""+objectArray.alt);
 
     //for the ais card:
-    if (img.id == "18") back.setAttribute("style", "background-color:black")
+    //if (img.id == "18") back.setAttribute("style", "background-color:black")
 
     card.setAttribute("onclick", "swapIt("+a+","+b+",this)");
 

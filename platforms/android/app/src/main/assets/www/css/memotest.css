@@ -24,13 +24,13 @@ table{
 }
 
 tr{
-    height: 4rem;
-    padding: .2rem 0;
+    height: 15%;
+    padding: .6% 0;
 }
 
 td{
     border: none;
-    padding: 0 .2rem;
+    padding: 0 .6%;
     text-align: center;
     perspective: 700px;
     width: 15%;

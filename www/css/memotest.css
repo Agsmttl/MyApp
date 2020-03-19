@@ -11,21 +11,21 @@ header main footer{
     width: 100%;
 }
 
-p, #turnos{
+p{
     height: 1.5rem;
+}
+#turnos{
+    height: 100%;
 }
 
 
 table{
-    background-image: url("../images/fondo.jpg");
     border-collapse: collapse;
-    background-size: cover;
-    background-position: center;
 }
 
 tr{
-    height: 4rem;
-    padding: .2rem 0;
+    height: 15%;
+    padding: .6% 0;
 }
 
 td{
